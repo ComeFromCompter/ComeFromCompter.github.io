@@ -6,24 +6,18 @@
   <title>WordPress升级、添加删除插件时需要输入FTP信息 | 亿特博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="WordPress升级、添加删除插件时需要输入FTP信息在WordPress后台自动升级时，或者更新、删除主题或者插件的时候，如果提示需要输入FTP账户信息，经过多次研究发现以下三种方法可以解决。解决方法如下：
-方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:
-define(“FS_METHOD”, “direct”);
-define(“FS_CHMOD_DIR”, 07">
+方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:12345define(“FS_METHOD”, “direct”);define(“FS_CHMOD_DIR”,">
 <meta property="og:type" content="article">
 <meta property="og:title" content="WordPress升级、添加删除插件时需要输入FTP信息">
 <meta property="og:url" content="http://www.bigademo.com/2015/04/16/wordpress-e5-8d-87-e7-ba-a7-e3-80-81-e6-b7-bb-e5-8a-a0-e5-88-a0-e9-99-a4-e6-8f-92-e4-bb-b6-e6-97-b6-e9-9c-80-e8-a6-81-e8-be-93-e5-85-a5ftp-e4-bf-a1-e6-81-af/index.html">
 <meta property="og:site_name" content="亿特博客">
 <meta property="og:description" content="WordPress升级、添加删除插件时需要输入FTP信息在WordPress后台自动升级时，或者更新、删除主题或者插件的时候，如果提示需要输入FTP账户信息，经过多次研究发现以下三种方法可以解决。解决方法如下：
-方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:
-define(“FS_METHOD”, “direct”);
-define(“FS_CHMOD_DIR”, 07">
-<meta property="og:updated_time" content="2016-03-26T14:25:19.050Z">
+方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:12345define(“FS_METHOD”, “direct”);define(“FS_CHMOD_DIR”,">
+<meta property="og:updated_time" content="2016-03-26T14:55:24.926Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="WordPress升级、添加删除插件时需要输入FTP信息">
 <meta name="twitter:description" content="WordPress升级、添加删除插件时需要输入FTP信息在WordPress后台自动升级时，或者更新、删除主题或者插件的时候，如果提示需要输入FTP账户信息，经过多次研究发现以下三种方法可以解决。解决方法如下：
-方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:
-define(“FS_METHOD”, “direct”);
-define(“FS_CHMOD_DIR”, 07">
+方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:12345define(“FS_METHOD”, “direct”);define(“FS_CHMOD_DIR”,">
   
     <link rel="alternative" href="/atom.xml" title="亿特博客" type="application/atom+xml">
   
@@ -281,10 +275,7 @@ define(“FS_CHMOD_DIR”, 07">
       
           
         <p>WordPress升级、添加删除插件时需要输入FTP信息在WordPress后台自动升级时，或者更新、删除主题或者插件的时候，如果提示需要输入FTP账户信息，经过多次研究发现以下三种方法可以解决。解决方法如下：</p>
-<p><strong>方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:</strong></p>
-<p><pre class="lang:default decode:true ">define(“FS_METHOD”, “direct”);</pre></p>
-<p>define(“FS_CHMOD_DIR”, 0777);</p>
-<p>define(“FS_CHMOD_FILE”, 0777);<br>&nbsp;</p>
+<p><strong>方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">define(“FS_METHOD”, “direct”);</span><br><span class="line"></span><br><span class="line">define(“FS_CHMOD_DIR”, 0777);</span><br><span class="line"></span><br><span class="line">define(“FS_CHMOD_FILE”, 0777);</span><br></pre></td></tr></table></figure></p>
 <p><strong>方法二、如果使用独立服务器或VPS，可以修改网站所在目录属性：</strong></p>
 <p>解决方法就是利用chown语句将网站文件夹的所有者设置给服务器： 如果你是LNMP的用户，请执行下面语句： chown -R www /home/wwwroot/网站目录 如果你是LEBScript的用户，请执行下面语句： chown -R www-data /var/www/网站目录 这样就可以解决自动更新必须填FTP的问题</p>
 
@@ -298,7 +289,7 @@ define(“FS_CHMOD_DIR”, 07">
         <p><span>本文标题:</span><a href="/2015/04/16/wordpress-e5-8d-87-e7-ba-a7-e3-80-81-e6-b7-bb-e5-8a-a0-e5-88-a0-e9-99-a4-e6-8f-92-e4-bb-b6-e6-97-b6-e9-9c-80-e8-a6-81-e8-be-93-e5-85-a5ftp-e4-bf-a1-e6-81-af/">WordPress升级、添加删除插件时需要输入FTP信息</a></p>
         <p><span>文章作者:</span><a href="/" title="访问 Tony 的个人博客">Tony</a></p>
         <p><span>发布时间:</span>2015年04月16日 - 21时38分</p>
-        <p><span>最后更新:</span>2016年03月26日 - 22时25分</p>
+        <p><span>最后更新:</span>2016年03月26日 - 22时55分</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2015/04/16/wordpress-e5-8d-87-e7-ba-a7-e3-80-81-e6-b7-bb-e5-8a-a0-e5-88-a0-e9-99-a4-e6-8f-92-e4-bb-b6-e6-97-b6-e9-9c-80-e8-a6-81-e8-be-93-e5-85-a5ftp-e4-bf-a1-e6-81-af/" title="WordPress升级、添加删除插件时需要输入FTP信息">http://www.bigademo.com/2015/04/16/wordpress-e5-8d-87-e7-ba-a7-e3-80-81-e6-b7-bb-e5-8a-a0-e5-88-a0-e9-99-a4-e6-8f-92-e4-bb-b6-e6-97-b6-e9-9c-80-e8-a6-81-e8-be-93-e5-85-a5ftp-e4-bf-a1-e6-81-af/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.bigademo.com/2015/04/16/wordpress-e5-8d-87-e7-ba-a7-e3-80-81-e6-b7-bb-e5-8a-a0-e5-88-a0-e9-99-a4-e6-8f-92-e4-bb-b6-e6-97-b6-e9-9c-80-e8-a6-81-e8-be-93-e5-85-a5ftp-e4-bf-a1-e6-81-af/　　作者: Tony" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>

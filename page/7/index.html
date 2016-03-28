@@ -951,10 +951,7 @@
       
           
         <p>WordPress升级、添加删除插件时需要输入FTP信息在WordPress后台自动升级时，或者更新、删除主题或者插件的时候，如果提示需要输入FTP账户信息，经过多次研究发现以下三种方法可以解决。解决方法如下：</p>
-<p><strong>方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:</strong></p>
-<p><pre class="lang:default decode:true ">define(“FS_METHOD”, “direct”);</pre></p>
-<p>define(“FS_CHMOD_DIR”, 0777);</p>
-<p>define(“FS_CHMOD_FILE”, 0777);<br>&nbsp;</p>
+<p><strong>方法一、如果使用虚拟主机，可以在wp-config.php里加入下面代码:</strong><br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">define(“FS_METHOD”, “direct”);</span><br><span class="line"></span><br><span class="line">define(“FS_CHMOD_DIR”, 0777);</span><br><span class="line"></span><br><span class="line">define(“FS_CHMOD_FILE”, 0777);</span><br></pre></td></tr></table></figure></p>
 <p><strong>方法二、如果使用独立服务器或VPS，可以修改网站所在目录属性：</strong></p>
 <p>解决方法就是利用chown语句将网站文件夹的所有者设置给服务器： 如果你是LNMP的用户，请执行下面语句： chown -R www /home/wwwroot/网站目录 如果你是LEBScript的用户，请执行下面语句： chown -R www-data /var/www/网站目录 这样就可以解决自动更新必须填FTP的问题</p>
 
